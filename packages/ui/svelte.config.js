@@ -1,0 +1,27 @@
+import adapter from '@sveltejs/adapter-auto';
+import preprocess from 'svelte-preprocess';
+import Unocss from 'unocss/vite';
+import presetWind from '@unocss/preset-wind';
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://github.com/sveltejs/svelte-preprocess
+	// for more information about preprocessors
+	preprocess: preprocess(),
+
+	kit: {
+		package: {
+			dir: 'dist'
+		},
+		adapter: adapter(),
+		vite: {
+			plugins: [
+				Unocss({
+					presets: [presetWind()]
+				})
+			]
+		}
+	}
+};
+
+export default config;
