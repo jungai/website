@@ -1,5 +1,7 @@
 # My Website
 
+> previous version branch -> [nextjs](https://github.com/jungai/website/tree/nextjs)
+
 ## Setup
 
 > use pnpm
