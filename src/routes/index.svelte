@@ -1,16 +1,2 @@
-<script context="module" lang="ts">
-	export const prerender = true;
-</script>
-
-<script lang="ts">
-</script>
-
-<svelte:head>
-	<title>Index</title>
-</svelte:head>
-
-<section>
-	<div class="grid place-content-center h-screen">
-		<h1 class="text(2xl [tomato])">Hello</h1>
-	</div>
-</section>
+<h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
