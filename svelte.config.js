@@ -1,5 +1,7 @@
 import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
+import Unocss from 'unocss/vite';
+import presetWind from '@unocss/preset-wind';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,7 +10,14 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		vite: {
+			plugins: [
+				Unocss({
+					presets: [presetWind()]
+				})
+			]
+		}
 	}
 };
 
