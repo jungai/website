@@ -1,15 +1,20 @@
-jungai-> [website](https://www.juver.xyz),[rss feed](https://juver.xyz/rss/feed.xml)
+# My Website
 
-## Tools
+## Setup
 
-- nextjs
-- mdxjs
-- tailwindcss & tailwind typography
-- gray-matter
-- date-fns
-- react-icons
+> use pnpm
 
-## Branches
+```sh
+pnpm install
+```
 
-- master(react)
-- [gatsby](https://github.com/jungai/juver.xyz/tree/gatsby) (developing...)
+## Local Development
+
+```json
+	"scripts": {
+		"build:blogs": "turbo run build --filter=blogs",
+		"build:docs": "turbo run build --filter=docs",
+		"dev:blogs": "turbo run dev --filter=blogs",
+		"dev:docs": "turbo run dev --filter=docs"
+	}
+```
