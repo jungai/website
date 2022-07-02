@@ -2,7 +2,18 @@
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {}
+		extend: {
+			height: {
+				'header-height': 'var(--header-height)'
+			},
+			width: {
+				'sidebar-width': 'var(--sidebar-width)'
+			},
+			colors: {
+				primary: 'var(--primary)',
+				secondary: 'var(--secondary)'
+			}
+		}
 	},
-	plugins: []
+	plugins: [require('@tailwindcss/typography')]
 };

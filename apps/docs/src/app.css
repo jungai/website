@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--header-height: 60px;
+	--sidebar-width: 250px;
+
+	--primary: #34495e;
+	--secondary: #1abc9c;
+}
