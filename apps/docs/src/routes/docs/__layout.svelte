@@ -9,10 +9,7 @@
 		{
 			name: 'Tools',
 			basePath: '/docs/tools',
-			child: [
-				{ name: 'Taze', path: '/taze' },
-				{ name: 'Ni', path: '/ni' }
-			]
+			child: [{ name: 'Pnpm', path: '/pnpm' }]
 		}
 	];
 </script>
@@ -21,7 +18,7 @@
 <main>
 	<Sidebar {activeRoute} {items} />
 	<article
-		class="pl-[calc(var(--sidebar-width)_+_50px)] pt-[calc(var(--header-height)_+_10px)] prose"
+		class="ml-[calc(var(--sidebar-width)_+_50px)] pt-[calc(var(--header-height)_+_10px)] prose"
 	>
 		<slot />
 	</article>
