@@ -49,7 +49,7 @@ pnpm dlx ts-node ./src/index.ts
 
 ## With workspace
 
-create a `pnpm-workspace` in root of project and declare each package
+create a `pnpm-workspace.yaml` in root of project and declare each package
 
 ```yaml
 packages:
