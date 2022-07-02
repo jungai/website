@@ -1,14 +1,16 @@
 <script lang="ts">
 	import MdPlayArrow from 'svelte-icons/md/MdPlayArrow.svelte';
+	import { cls } from '$lib/utils';
+
 	type TItem = {
 		name: string;
-		path: string;
-		child: Omit<TItem, 'child'>[];
+		basePath: string;
+		child: (Omit<TItem, 'child' | 'basePath'> & { path: string })[];
 	};
 
-	export let items: TItem[] = [];
+	export let activeRoute: string | null;
 
-	let isActive: number | undefined;
+	export let items: TItem[] = [];
 </script>
 
 <aside
@@ -19,18 +21,25 @@
 >
 	<nav>
 		<ul class="flex flex-col">
-			{#each items as item, index}
-				<li class="text-md md:text-lg cursor-pointer relative" on:click={() => (isActive = index)}>
-					<a href="">{item.name}</a>
-					{#if isActive === index}
-						<span class="absolute w-5 h-5 rotate-180 -right-2 top-1"><MdPlayArrow /></span>
-					{/if}
+			{#each items as item}
+				<li class="text-md md:text-lg">
+					{item.name}
 				</li>
-				{#if item.child.length > 0 && isActive === index}
+				{#if item.child.length > 0}
 					<ul class="flex flex-col pl-6">
 						{#each item.child as child}
-							<li class="cursor-pointer">
-								{child.name}
+							<li
+								class={cls([
+									'cursor-pointer relative hover:underline',
+									activeRoute === `${item.basePath}${child.path}` ? 'underline' : null
+								])}
+							>
+								<a class="inline-block w-full" href={`${item.basePath}${child.path}`}>
+									{child.name}</a
+								>
+								{#if activeRoute === `${item.basePath}${child.path}`}
+									<span class="absolute w-5 h-5 rotate-180 -right-2 top-1"><MdPlayArrow /></span>
+								{/if}
 							</li>
 						{/each}
 					</ul>

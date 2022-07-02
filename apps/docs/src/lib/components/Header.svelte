@@ -12,11 +12,15 @@
 			>
 		</h1>
 		<ul class="flex gap-4 items-center justify-center">
-			<li class="hover:text-secondary hover:font-semibold hover:italic cursor-pointer">Blog</li>
+			<li class="hover:text-secondary hover:font-semibold hover:italic cursor-pointer">
+				<a href="https://juver.xyz" target="_blank">Blog</a>
+			</li>
 			<li class="hover:text-secondary hover:font-semibold cursor-pointer">
-				<div class="w-8 h-8">
-					<FaGithubAlt />
-				</div>
+				<a href="https://github.com/jungai/website" target="_blank">
+					<div class="w-8 h-8">
+						<FaGithubAlt />
+					</div>
+				</a>
 			</li>
 		</ul>
 	</div>
