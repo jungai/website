@@ -17,7 +17,11 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		alias: {
+			$types: 'src/types',
+			$config: 'src/config'
+		}
 	}
 };
 

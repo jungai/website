@@ -1,16 +1,12 @@
 <script lang="ts">
 	import MdPlayArrow from 'svelte-icons/md/MdPlayArrow.svelte';
 	import { cls } from '$lib/utils';
-
-	type TItem = {
-		name: string;
-		basePath: string;
-		child: (Omit<TItem, 'child' | 'basePath'> & { path: string })[];
-	};
+	import type { TConfig } from '$types';
 
 	export let activeRoute: string | null;
+	export let items: TConfig['routes'] = [];
 
-	export let items: TItem[] = [];
+	$: target = (base: string, path: string) => `${base}${path}`;
 </script>
 
 <aside
@@ -30,14 +26,14 @@
 						{#each item.child as child}
 							<li
 								class={cls([
-									'cursor-pointer relative hover:underline',
-									activeRoute === `${item.basePath}${child.path}` ? 'underline' : null
+									'cursor-pointer relative hover:underline hover:text-secondary',
+									activeRoute === target(item.basePath, child.path) ? 'underline' : null
 								])}
 							>
-								<a class="inline-block w-full" href={`${item.basePath}${child.path}`}>
+								<a class="inline-block w-full" href={target(item.basePath, child.path)}>
 									{child.name}</a
 								>
-								{#if activeRoute === `${item.basePath}${child.path}`}
+								{#if activeRoute === target(item.basePath, child.path)}
 									<span class="absolute w-5 h-5 rotate-180 -right-2 top-1"><MdPlayArrow /></span>
 								{/if}
 							</li>
