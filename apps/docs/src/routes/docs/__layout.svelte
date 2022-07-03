@@ -2,6 +2,8 @@
 	import { page } from '$app/stores';
 	import Header from '$lib/components/Header.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
+	import Navigation from '$lib/components/Navigation.svelte';
+	import Menu from '$lib/components/Menu.svelte';
 	import { config } from '$config';
 
 	$: activeRoute = $page.url.pathname;
@@ -9,9 +11,14 @@
 
 <Header />
 <main>
-	<Sidebar {activeRoute} items={config.routes} />
+	<Navigation>
+		<Menu active={activeRoute} items={config.routes} />
+	</Navigation>
+	<Sidebar>
+		<Menu active={activeRoute} items={config.routes} />
+	</Sidebar>
 	<article
-		class="ml-[calc(var(--sidebar-width)_+_50px)] pt-[calc(var(--header-height)_+_10px)] prose"
+		class="p-6 lg:ml-[calc(var(--sidebar-width)_+_50px)] pt-[calc(var(--header-height)_+_10px)] prose"
 	>
 		<slot />
 	</article>

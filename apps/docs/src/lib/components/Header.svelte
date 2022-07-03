@@ -3,9 +3,9 @@
 </script>
 
 <header
-	class="fixed border-b border-[#34495e] w-full p-4 shadow-md flex justify-center items-center h-header-height z-50 bg-white"
+	class="fixed border-b border-[#34495e] w-full p-4 shadow-md flex justify-center items-center h-header-height z-20 bg-white"
 >
-	<div class="w-3/5 flex justify-between items-center text-primary">
+	<div class="w-full md:w-3/5 flex justify-between items-center text-primary">
 		<a href="/docs/welcome">
 			<h1 class="text-xl font-semibold">
 				<span class="font-semibold text-secondary text-2xl">J</span>ungai Doc<span
