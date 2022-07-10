@@ -18,7 +18,7 @@
 		<Menu active={activeRoute} items={config.routes} />
 	</Sidebar>
 	<article
-		class="p-6 lg:ml-[calc(var(--sidebar-width)_+_50px)] pt-[calc(var(--header-height)_+_10px)] prose"
+		class="p-6 md:ml-[calc(var(--sidebar-width)_+_50px)] pt-[calc(var(--header-height)_+_10px)] prose"
 	>
 		<slot />
 	</article>
