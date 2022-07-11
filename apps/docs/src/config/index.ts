@@ -6,8 +6,21 @@ const config: TConfig = {
 	routes: [
 		{
 			name: 'Tools',
-			basePath: '/docs/tools',
-			child: [{ name: 'Pnpm', path: '/pnpm' }]
+			child: [
+				{ name: 'Pnpm', path: '/docs/pnpm' },
+				{ name: 'Vitest', path: '/docs/vitest' }
+			]
+		},
+		{
+			name: 'Frontend',
+			child: [
+				{ name: 'Vue 101', path: '/docs/vue101' },
+				{ name: 'React 101', path: '/docs/react101' }
+			]
+		},
+		{
+			name: 'Backend',
+			child: [{ name: 'Nestjs', path: '/docs/nest101' }]
 		}
 	]
 };

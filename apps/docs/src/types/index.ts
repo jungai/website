@@ -1,7 +1,6 @@
 export type TRoute = {
 	name: string;
-	basePath: string;
-	child: (Omit<TRoute, 'child' | 'basePath'> & { path: string })[];
+	child: (Omit<TRoute, 'child'> & { path: string })[];
 };
 
 export type TConfig = {
