@@ -8,7 +8,7 @@ const config: TConfig = {
 			name: 'Tools',
 			child: [
 				{ name: 'Pnpm', path: '/docs/pnpm' },
-				{ name: 'Vitest', path: '/docs/vitest' }
+				{ name: 'ติดตั้ง vitest part 1', path: '/docs/vitest' }
 			]
 		},
 		{

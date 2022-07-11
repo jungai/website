@@ -6,7 +6,7 @@ install pnpm via asdf,npm,yarn
 
 > recommended `asdf` 😀
 
-```sh
+```bash
 asdf plugin-add pnpm
 # npm -g pnpm
 # yarn global add pnpm
@@ -16,34 +16,34 @@ asdf plugin-add pnpm
 
 ### Install
 
-```sh
+```bash
 pnpm install
 ```
 
 ### Run script
 
-```sh
+```bash
 pnpm run build # pnpm build
 pnpm run dev # pnpm dev
 ```
 
 ### Run script (recursive)
 
-```sh
+```bash
 pnpm -r run build # pnpm build
 pnpm -r run dev # pnpm dev
 ```
 
 ### Run script in each packages
 
-```sh
+```bash
 pnpm --filter=<package name> build
 # pnpm --filter=<package name> build
 ```
 
 ### Run script without installing
 
-```sh
+```bash
 pnpm dlx ts-node ./src/index.ts
 ```
 
