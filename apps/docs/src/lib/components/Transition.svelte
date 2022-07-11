@@ -1,10 +1,6 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 
-	$: {
-		console.log(url);
-	}
-
 	export let url: URL;
 </script>
 
