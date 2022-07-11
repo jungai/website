@@ -1,5 +1,8 @@
 # My Website
 
+- [blogs](https://www.juver.xyz/)
+- [docs](https://docs-git-dev-jungai.vercel.app/)
+
 > previous version branch -> [nextjs](https://github.com/jungai/website/tree/nextjs)
 
 ## Setup
