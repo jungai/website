@@ -1,14 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Header from '$lib/components/Header.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
-	import Navigation from '$lib/components/Navigation.svelte';
-	import Menu from '$lib/components/Menu.svelte';
 	import FaGithubAlt from 'svelte-icons/fa/FaGithubAlt.svelte';
-	import { config } from '$config';
 	import Transition from '$lib/components/Transition.svelte';
-
-	$: activeRoute = $page.url.pathname;
 </script>
 
 <main class="relative flex">
