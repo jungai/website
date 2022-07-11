@@ -1,14 +1,34 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Sidebar from '$lib/components/Sidebar.svelte';
+	import Navigation from '$lib/components/Navigation.svelte';
 	import FaGithubAlt from 'svelte-icons/fa/FaGithubAlt.svelte';
 	import Transition from '$lib/components/Transition.svelte';
+
+	let isOpenNav = false;
 </script>
 
 <main class="relative flex">
-	<Sidebar />
-	<div class="md:ml-[calc(var(--sidebar-width)_+_50px)] w-full">
-		<div class="flex w-full justify-end py-2 px-8">
+	<Navigation open={isOpenNav} />
+	<button
+		class="md:hidden btn btn-circle fixed right-4 top-[70%]"
+		on:click={() => (isOpenNav = !isOpenNav)}
+	>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			class="h-6 w-6"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke="currentColor"
+			><path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M6 18L18 6M6 6l12 12"
+			/></svg
+		>
+	</button>
+	<div class=" px-6 md:px-0 md:ml-[calc(var(--sidebar-width)_+_50px)] w-full">
+		<div class="flex w-full justify-end py-2 md:px-8">
 			<ul class="flex gap-4 items-center justify-center ">
 				<li class="hover:text-secondary hover:font-semibold hover:italic cursor-pointer">
 					<a href="https://juver.xyz" target="_blank">Blog</a>
